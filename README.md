@@ -2,8 +2,6 @@
 
 关于XX-Net，请看[github/XX-Net](https://github.com/XX-net/XX-Net)
 
-启动容器后通过run.sh来启动xx-net，默认不输出日志到docker，有需要的话，可进入容器修改run.sh。
-
 ### 目录
 
 - [安装docker](#安装docker)
@@ -47,7 +45,7 @@ docker build . -t zengchw/xx-net
 建议映射容器卷，方便修改配置和导出证书
 
 ```sh
-docker run -d --name zengchw/xx-net \
+docker run -d --name xx-net \
     -p 8085-8087:8085-8087 \
     -v `pwd`/data:/data/xx-net/data \
     zengchw/xx-net
