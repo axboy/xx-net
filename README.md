@@ -1,4 +1,4 @@
-# Docker运行XX-Net
+# Docker部署XX-Net
 
 关于XX-Net，请看[github/XX-Net](https://github.com/XX-net/XX-Net)
 
@@ -61,7 +61,7 @@ docker run -d --name xx-net \
 
 ### 修改配置
 
-在容器内创建/data/xx-net/data/gae_proxy/config.ini文件
+在容器内创建/data/xx-net/data/gae_proxy/manual.ini文件
 添加以下内容，允许指定网段访问。
 
 ```
@@ -83,7 +83,7 @@ ip = 0.0.0.0
 
 ```
 docker exec -it ${CONTAINER_NAME} bash
-cd /data/XX-Net-3.3.1/code/default/gae_proxy/server
+cd /data/xx-net/code/default/gae_proxy/server
 python uploader.py "appid1|appid2" -debug
 #下面的看控制台输出，用浏览器访问链接
 ```
